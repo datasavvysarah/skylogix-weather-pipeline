@@ -1,0 +1,45 @@
+cat > .gitignore << 'EOF'
+#Environment variables (NEVER commit this!)
+.env
+
+# Virtual environment
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Airflow
+airflow/
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Database files
+*.db
+*.sqlite
+EOF
+
+cat >> .gitignore << 'EOF'
+
+# Specific Airflow Configs (Generated locally)
+airflow.cfg
+config.py
+unittests.cfg
+
+# MongoDB / Local Data
+*.json
+*.csv
+EOF
